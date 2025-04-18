@@ -3,4 +3,4 @@
 *.bak
 .env
 /others/
-/src/hardware/
+/src/hw/

@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Quadruped documentation
+Documentacion del proyecto cuadrúpedo
 ==================================
 
-Esta es la documentación oficial del proyecto **Quadruped**. Aquí encontrarás toda la información técnica y de uso del robot cuadrúpedo, incluyendo requisitos, arquitectura del sistema, desarrollo y más.
+Esta es la documentación oficial del **proyecto cuadrúpedo**. Aquí se encuentra toda la información técnica y de uso del robot cuadrúpedo, incluyendo requisitos, arquitectura del sistema, desarrollo y más.
 
 .. toctree::
    :maxdepth: 2

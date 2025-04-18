@@ -12,10 +12,12 @@ Esta es la documentación oficial del **proyecto cuadrúpedo**. Aquí se encuent
    :maxdepth: 2
    :caption: Contenido:
 
-   introduccion
+   description
    software_setup
    install_ros
    packages_doc
    quadruped_description
    test_package
    robot_sim
+   sw_gude
+   system_requirements

@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Documentacion del proyecto cuadrúpedo
-==================================
+========================================
 
 Esta es la documentación oficial del **proyecto cuadrúpedo**. Aquí se encuentra toda la información técnica y de uso del robot cuadrúpedo, incluyendo requisitos, arquitectura del sistema, desarrollo y más.
 

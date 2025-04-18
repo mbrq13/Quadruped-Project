@@ -3,15 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Quadruped documentation
-=======================
+Welcome to Quadruped documentation
+==================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+Esta es la documentación oficial del proyecto **Quadruped**. Aquí encontrarás toda la información técnica y de uso del robot cuadrúpedo, incluyendo requisitos, arquitectura del sistema, desarrollo y más.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contenido:
 
+   introduccion
+   install_ros
+   packages_doc
+   software_setup
+   quadruped_description
+   test_package
+   robot_sim

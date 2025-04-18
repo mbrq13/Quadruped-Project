@@ -28,7 +28,7 @@
         ```
         output
 
-        <img src="../images/test_package/output_dev.png" alt="dev" width="400"/>  
+        <img src="/images/test_package/output_dev.png" alt="dev" width="400"/>  
 
         - **fps**: Frames por segundo, para ver la información de la cámara ejecutar lo siguiente
         ```bash

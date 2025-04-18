@@ -1,4 +1,4 @@
-# Robots sim
+# Robot Simulation
 
 La simulación de cada robot se realizará en un espacio de trabajo diferente, esto con el fin de evitar conflictos de archivos y no contaminar nuestro espacio de trabajo principal
 
@@ -100,7 +100,7 @@ source ~/champ_ws/install/setup.bash
 
 Nota: La primera vez que se ejecuta la simulación esta suele tardar alrededor de 1 a 3 min, esto debido a la cantidad de procesos a ejecutarse, esto solo sucederá la primera vez, luego el tiempo estimado es de 10 a 30 segundos. 
 
-Para poder ejecutar esta simulación es necesario aver seguido estos pasos [Quadruped](../README.md).
+Para poder ejecutar esta simulación es necesario aver seguido estos pasos [Quadruped](../software_setup).
 
 Terminal 1 
 ```bash

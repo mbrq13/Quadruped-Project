@@ -19,5 +19,5 @@ Esta es la documentación oficial del **proyecto cuadrúpedo**. Aquí se encuent
    quadruped_description
    test_package
    robot_sim
-   sw_guide
+   sw_prev_guide
    system_requirements

@@ -38,11 +38,11 @@ ros2 launch the_construct_office_gazebo warehouse_rb1_rviz.launch.xml
 ```
 output gazebo
 
-<img src="./images/rb1/gazebo.png" alt="rviz" width="400"/>  
+<img src="_static/images/rb1/gazebo.png" alt="rviz" width="400"/>  
 
 output rviz
 
-<img src="./images/rb1/rviz.png" alt="rviz" width="400"/>  
+<img src="_static/images/rb1/rviz.png" alt="rviz" width="400"/>  
 
 ### 1.1.3 Mover robot
 

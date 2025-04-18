@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Software Setup &mdash; documentación de Quadruped Project - </title>
+  <title>Descripción &mdash; documentación de Quadruped Project - </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -20,8 +20,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Instalacion de ROS" href="install_ros.html" />
-    <link rel="prev" title="Descripción" href="description.html" /> 
+    <link rel="next" title="Software Setup" href="software_setup.html" />
+    <link rel="prev" title="Documentacion del proyecto cuadrúpedo" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,8 +45,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="description.html">Descripción</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Software Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_setup.html">Software Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_ros.html">Instalacion de ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages_doc.html">Descripcion de paquetes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quadruped_description.html">Descripción del Cuadrúpedo</a></li>
@@ -70,9 +70,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Software Setup</li>
+      <li class="breadcrumb-item active">Descripción</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/software_setup.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+            <a href="_sources/description.md.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
   </ul>
   <hr/>
@@ -80,46 +80,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="software-setup">
-<h1>Software Setup<a class="headerlink" href="#software-setup" title="Link to this heading"></a></h1>
-<ol class="arabic">
-<li><p class="rubric" id="creacion-de-espacio-de-trabajo">Creación de espacio de trabajo</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
-mkdir<span class="w"> </span>-p<span class="w"> </span>quadruped_robot_ws/src
-</pre></div>
-</div>
-</li>
-<li><p class="rubric" id="descarga-de-repositorio">Descarga de repositorio</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>quadruped_robot_ws/src
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sergio100899/Quadruped_Project_Scandia.git<span class="w"> </span>
-</pre></div>
-</div>
-</li>
-<li><p class="rubric" id="descargar-e-instalar-dependencias">Descargar e instalar dependencias</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/quadruped_robot_ws
-rosdep<span class="w"> </span>init
-rosdep<span class="w"> </span>update<span class="w"> </span>--rosdistro<span class="w"> </span><span class="nv">$ROS_DISTRO</span>
-rosdep<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span>--from-path<span class="w"> </span>src<span class="w"> </span>--rosdistro<span class="w"> </span><span class="nv">$ROS_DISTRO</span><span class="w"> </span>-y
-</pre></div>
-</div>
-</li>
-<li><p class="rubric" id="compilacion-de-espacio-de-trabajo">Compilación de espacio de trabajo</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/quadruped_robot_ws
-<span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash<span class="w"> </span>
-colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
-<span class="nb">source</span><span class="w"> </span>install/setup.bash
-</pre></div>
-</div>
-</li>
-</ol>
+  <section id="descripcion">
+<h1>Descripción<a class="headerlink" href="#descripcion" title="Link to this heading"></a></h1>
+<p>El proyecto consiste en el desarrollo de un robot cuadrúpedo destinado a mejorar la seguridad en la industria minera al explorar áreas peligrosas e inaccesibles para los trabajadores humanos, como túneles estrechos, zonas con gases tóxicos o riesgo de colapso. La implementación en hardware implicará la construcción de un chasis ligero capaz de soportar las condiciones ambientales propias de la mina y que tenga un grado de protección IP ante polvo y agua, pero lo suficientemente ligero para no impedir movimientos ágiles del robot por su entorno. Este robot estará equipado con una suite de sensores exteroceptivos y propioceptivos que le permitirá estimar de manera robusta su estado actual y el de su entorno en tiempo real. Para este fin, se desarrollará el software de la plataforma utilizando un enfoque modular inalámbrico basado en ROS2, con simulaciones en Gazebo y Rviz para validar el sistema antes de desplegarlo y permitir desarrollo continuo de sus subcomponentes. Posteriormente, será desplegado en la supercomputadora de Inteligencia Artificial llamada Jetson Orin Nano de Nvidia. En cuanto a la gestión energética, se diseñarán baterías eficientes, con buena durabilidad y factor de forma optimizado para asegurar lograr un mayor tiempo de uso sin recargar y extender el tiempo de vida de las baterías durante el momento de operación.</p>
+<p>Se abordarán cuatro aspectos clave durante el desarrollo del software: percepción, planificación, comunicación y control. Los algoritmos avanzados de percepción permitirán al robot interpretar la transmisión de video y detectar en tiempo real elementos usando sus sensores exteroceptivos, proporcionando información acerca de los cambios topográficos y anomalías geológicas en áreas que presenten grietas o fisuras. Se desarrollarán algoritmos de planificación de trayectorias para garantizar un movimiento seguro y eficiente, evitando colisiones y obstáculos en la mayoría de los casos. Se establecerán sistemas resilientes de comunicación para la interacción con operadores humanos a distancia de manera segura en entornos denegados, facilitando la supervisión remota y la transmisión de datos en tiempo real. Además, se implementarán algoritmos de control modernos para garantizar una locomoción fluida y estable del robot en diversos terrenos y condiciones operativas. Cabe resaltar que, en estas condiciones, los robots a ruedas y drones tienen una operatividad limitada, por lo que este proyecto ofrece una prueba de concepto que pretende ser validada en los entornos competentes y, en el futuro, poder ser incluido durante las actividades diarias en una operación minera. Es decir, se espera que el robot sea programado para realizar inspecciones regulares de manera autónoma de la infraestructura minera, permitiendo la detección temprana de problemas de seguridad o mantenimiento y contribuyendo así a una actividad minera más tecnológica y segura en el Perú.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="description.html" class="btn btn-neutral float-left" title="Descripción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="install_ros.html" class="btn btn-neutral float-right" title="Instalacion de ROS" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Documentacion del proyecto cuadrúpedo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="software_setup.html" class="btn btn-neutral float-right" title="Software Setup" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Descripción del Cuadrúpedo &mdash; documentación de Quadruped Project - </title>
+  <title>Requerimientos del Sistema &mdash; documentación de Quadruped Project - </title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -20,8 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Test package" href="test_package.html" />
-    <link rel="prev" title="Descripcion de paquetes" href="packages_doc.html" /> 
+    <link rel="prev" title="Conocimientos Previos Software" href="sw_guide.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,11 +48,14 @@
 <li class="toctree-l1"><a class="reference internal" href="software_setup.html">Software Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_ros.html">Instalacion de ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages_doc.html">Descripcion de paquetes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Descripción del Cuadrúpedo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quadruped_description.html">Descripción del Cuadrúpedo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test_package.html">Test package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robot_sim.html">Robot Simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sw_guide.html">Conocimientos Previos Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="system_requirements.html">Requerimientos del Sistema</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Requerimientos del Sistema</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#funcionalidades-necesarias-del-robot-prototipo-software">Funcionalidades Necesarias del robot Prototipo Software</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -70,9 +72,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Descripción del Cuadrúpedo</li>
+      <li class="breadcrumb-item active">Requerimientos del Sistema</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/quadruped_description.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+            <a href="_sources/system_requirements.md.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
   </ul>
   <hr/>
@@ -80,33 +82,66 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="descripcion-del-cuadrupedo">
-<h1>Descripción del Cuadrúpedo<a class="headerlink" href="#descripcion-del-cuadrupedo" title="Link to this heading"></a></h1>
-<ol class="arabic">
-<li><p class="rubric" id="configuracion-de-entorno">Configuración de entorno</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/quadruped_robot_ws/install/setup.bash
-</pre></div>
-</div>
-</li>
-<li><p class="rubric" id="lanzamiento">Lanzamiento</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>quadruped_description<span class="w"> </span>rviz_fake_joints.launch.xml
-</pre></div>
-</div>
+  <section id="requerimientos-del-sistema">
+<h1>Requerimientos del Sistema<a class="headerlink" href="#requerimientos-del-sistema" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Control</p>
 <ul>
-<li><p class="rubric" id="output">Output</p>
+<li><p>Actuadores: Control de cada como que permite el movimiento del robot.</p></li>
+<li><p>Estabilidad y movimiento: Control para mantener el equilibrio estático y en movimiento (dinámica).</p></li>
+<li><p>Marcha: Patrón de movimiento de las patas del robot.</p></li>
+</ul>
+</li>
+<li><p>Percepción</p>
+<ul>
+<li><p>Reconocimiento de terreno: Identificación de superficies, detección de irregularidades.</p></li>
+<li><p>Detectar obstáculos: Detección de obstáculos que impidan el movimiento en la trayectoria planificada.</p></li>
+<li><p>Detección de objetos: Detección de objetos en específico.</p></li>
+</ul>
+</li>
+<li><p>Navegación</p>
+<ul>
+<li><p>Planificación de rutas: Generación de trayectoria que evite obstáculos y que minimice el uso de recursos.</p></li>
+<li><p>Localización: Localización del robot dentro del entorno.
+o	Orientación: Orientación del robot dentro del entorno.
+o	Mapeo: Construcción del mapa del entorno.</p></li>
+</ul>
+</li>
+<li><p>Sensorización</p>
+<ul>
+<li><p>Temperatura: Monitoreo de condiciones ambientales.</p></li>
+<li><p>Humedad: Monitoreo de condiciones ambientales.</p></li>
+<li><p>Malformaciones: Detectar malformaciones del entorno que si bien no afectan en la trayectoria serían importantes para reportes del terreno.</p></li>
+</ul>
+</li>
+<li><p>Comunicación</p>
+<ul>
+<li><p>Protocolos inalámbricos: Comunicación que permita la transmisión de video y datos.</p></li>
+<li><p>Antenas: Diseño que asegure la comunicación en todo momento.</p></li>
+</ul>
 </li>
 </ul>
- <img src="_static/images/quadruped_description/rviz.png" alt="rviz" width="400"/>  
-</li>
-</ol>
+<p align="center">
+  <img src="_static/images/system_requirements/schema.png" alt="rviz" width="600"/>  
+</p>
+<section id="funcionalidades-necesarias-del-robot-prototipo-software">
+<h2>Funcionalidades Necesarias del robot Prototipo Software<a class="headerlink" href="#funcionalidades-necesarias-del-robot-prototipo-software" title="Link to this heading"></a></h2>
+<p>A. Que pueda hacer movimientos de roll pitch yaw sin desplazarse-&gt;Control</p>
+<p>B. Detección de rango de desplazamiento -&gt; Percepción (C)</p>
+<p>C. Detección de obstáculos -&gt; Percepción</p>
+<p>D. Tenga funcionamiento de Marcha o caminata -&gt; Control (A)</p>
+<p>E. Mapeo del terreno (Utilización de SLAM). -&gt; Navegación, Percepción (B)</p>
+<p>F. El robot tenga la capacidad de desplazarse de un punto a otro solo con un mapa 2D. -&gt;Navegación (E)</p>
+<p>G. Funcionamiento de seguimiento a una persona -&gt; Navegación y Percepción (B, F)</p>
+<p>H. Que tenga funcionalidad de levantarse en caso se caiga, equilibrio. -&gt; Control (A)</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="packages_doc.html" class="btn btn-neutral float-left" title="Descripcion de paquetes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="test_package.html" class="btn btn-neutral float-right" title="Test package" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sw_guide.html" class="btn btn-neutral float-left" title="Conocimientos Previos Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

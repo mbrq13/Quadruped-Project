@@ -1,0 +1,1 @@
+Reescribir comandos en la descrición de acuerdo a modificacion de ubicacion de archivos

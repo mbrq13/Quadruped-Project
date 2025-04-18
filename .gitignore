@@ -1,0 +1,7 @@
+# Ignorar archivos temporales de editor
+*.log
+*.swp
+*.bak
+
+# Ignorar archivos de configuración del entorno
+.env

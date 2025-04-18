@@ -1,3 +1,9 @@
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../src'))
+# -- Path setup --------------------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#path-setup
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:

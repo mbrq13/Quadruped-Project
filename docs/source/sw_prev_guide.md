@@ -23,19 +23,19 @@ Para el proyecto usaremos el método de ramificación llamado “GitHub Flow”,
 </p>
 
 ### Instalación
-Visitar el enlace GitHub Desktop | Simple collaboration from your desktop , dar Click en Download for Windows (64bit) y hacer doble click en el ejecutable descargado. Además, descargar mediante el siguiente enlace https://git-scm.com/downloads 
+Visitar el enlace GitHub Desktop | Simple collaboration from your desktop , dar Click en Download for Windows (64bit) y hacer doble click en el ejecutable descargado. Además, descargar mediante el siguiente enlace <https://git-scm.com/downloads> 
 
 <p align="center">
   <img src="_static/images/guide/git_desktop.png" alt="rviz" width="600"/>  
 </p>
 
 
-En el siguiente enlace pueden ver un pequeño tutorial de como usar la aplicación de GitHub Desktop: https://www.youtube.com/watch?v=PvUexC0-D2s
+En el siguiente enlace pueden ver un pequeño tutorial de como usar la aplicación de GitHub Desktop: <https://www.youtube.com/watch?v=PvUexC0-D2s>
 ## Docker
 Docker es un software utilizado para desplegar aplicaciones dentro de contenedores virtuales. La principal diferencia con respecto a las máquinas virtuales es que los contenedores Docker comparten el sistema operativo del anfitrión, mientras que las máquinas virtuales también tienen un sistema operativo invitado que se ejecuta sobre el sistema anfitrión.
 ### Instalación
 
-En el siguiente enlace se muestra un tutorial para la instalación de Docker y WSL: Docker, Instlación en Windows (más WSL, Window Subsystem for Linux) https://www.youtube.com/watch?v=ZO4KWQfUBBc
+En el siguiente enlace se muestra un tutorial para la instalación de Docker y WSL: Docker, Instlación en Windows (más WSL, Window Subsystem for Linux) <https://www.youtube.com/watch?v=ZO4KWQfUBBc>
 ### Comandos básicos para ejecutar en el terminal
 
 Para poder practicar los siguientes comandos comandos usar <image_name> = ubuntu
@@ -49,7 +49,7 @@ Para poder practicar los siguientes comandos comandos usar <image_name> = ubuntu
   * Docker ps -a: Muestra todos los contenedores
   * Docker exec -it <container_name> /bin/bash: Abre un terminal bash de un contenedor corriendo.
 
-En el siguiente documento pueden ver más comandos útiles para usar en Docker https://docs.docker.com/get-started/docker_cheatsheet.pdf
+En el siguiente documento pueden ver más comandos útiles para usar en Docker <https://docs.docker.com/get-started/docker_cheatsheet.pdf>
 ### Comandos básicos de Linux 
   
-En el siguiente enlace se encuentran enlistados algunos comandos básicos de Linux: Los 60 comandos básicos de Linux que todo usuario debe saber https://www.hostinger.com/es/tutoriales/linux-comandos 
+En el siguiente enlace se encuentran enlistados algunos comandos básicos de Linux: Los 60 comandos básicos de Linux que todo usuario debe saber <https://www.hostinger.com/es/tutoriales/linux-comandos>

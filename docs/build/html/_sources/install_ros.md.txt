@@ -4,7 +4,7 @@
 1. ## Instalacion de ROS
     La versión de ROS que usaremos será Humble y gazebo classic, para esto necesitamos tener   instalado la versión 22.04 de Ubuntu que se llama Jammy.
 
-    <img src="/images/install_ros/Humble.png" alt="Descripción de la imagen" width="200"/>  
+    <img src="_static/images/install_ros/Humble.png" alt="Descripción de la imagen" width="200"/>  
 
     Instalar ubuntu se puede hacer de varias maneras, la más sencilla es atravez de [wsl2](https://learn.microsoft.com/es-es/windows/wsl/install), las otras son dual boot y a travez de una máquina virtual.
     1. wsl (instalación fácil, recomendado)
@@ -16,7 +16,7 @@
     1. #### Abrir un terminal de windows PowerShell o Windows Command en modo administrador.
 
         #### Image
-        <img src="/images/install_ros/power_shell.png" alt="Descripción de la imagen" width="600"/>   
+        <img src="_static/images/install_ros/power_shell.png" alt="Descripción de la imagen" width="600"/>   
 
     2. #### Ejecutar
 
@@ -24,7 +24,7 @@
         wsl --install -d Ubuntu-22.04
         ```
         #### Output (en el caso de ustedes se procedera con la instalación)
-        <img src="/images/install_ros/output_terminal.png" alt="Descripción de la imagen" width="600"/>   
+        <img src="_static/images/install_ros/output_terminal.png" alt="Descripción de la imagen" width="600"/>   
 
     3. #### Descargar visual estudio code
 
@@ -100,8 +100,8 @@
 
         ### Output
         #### Output terminal 1
-        <img src="/images/install_ros/simple_publish_example.png" alt="Output terminal 1" width="400"/>  
+        <img src="_static/images/install_ros/simple_publish_example.png" alt="Output terminal 1" width="400"/>  
 
         #### Output terminal 2
-        <img src="/images/install_ros/simple_subscri_example.png" alt="Output terminal 2" width="340"/>
+        <img src="_static/images/install_ros/simple_subscri_example.png" alt="Output terminal 2" width="340"/>
 

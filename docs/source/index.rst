@@ -13,9 +13,9 @@ Esta es la documentación oficial del proyecto **Quadruped**. Aquí encontrarás
    :caption: Contenido:
 
    introduccion
+   software_setup
    install_ros
    packages_doc
-   software_setup
    quadruped_description
    test_package
    robot_sim

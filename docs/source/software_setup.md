@@ -1,4 +1,4 @@
-# Configuración
+# Software Setup
 
 1. ## Creación de espacio de trabajo
     ```bash

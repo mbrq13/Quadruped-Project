@@ -10,5 +10,5 @@
     ```
     - ### Output 
     
-    <img src="/images/quadruped_description/rviz.png" alt="rviz" width="400"/>  
+    <img src="_static/images/quadruped_description/rviz.png" alt="rviz" width="400"/>  
 

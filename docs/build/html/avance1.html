@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avance del Proyecto de Robot Cuadrúpedo &mdash; documentación de Quadruped Project - </title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=e2bb6099"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=f85f4cfb"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Quadruped Project
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="description.html">Descripción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software_setup.html">Software Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install_ros.html">Instalacion de ROS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages_doc.html">Descripcion de paquetes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quadruped_description.html">Descripción del Cuadrúpedo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_package.html">Test package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robot_sim.html">Robot Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sw_prev_guide.html">Conocimientos Previos Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system_requirements.html">Requerimientos del Sistema</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Quadruped Project</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Avance del Proyecto de Robot Cuadrúpedo</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/avance1.md.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="avance-del-proyecto-de-robot-cuadrupedo">
+<h1>Avance del Proyecto de Robot Cuadrúpedo<a class="headerlink" href="#avance-del-proyecto-de-robot-cuadrupedo" title="Link to this heading"></a></h1>
+<section id="lectura-del-datasheet-del-motor-go-m8010-6">
+<h2>1. Lectura del Datasheet del Motor GO-M8010-6<a class="headerlink" href="#lectura-del-datasheet-del-motor-go-m8010-6" title="Link to this heading"></a></h2>
+<p><img alt="Motor GO-M8010-6" src="_images/motoR_GO-M8010.PNG" /></p>
+<section id="descripcion-general">
+<h3>Descripción General<a class="headerlink" href="#descripcion-general" title="Link to this heading"></a></h3>
+<p>El motor <strong>GO-M8010-6</strong> es un actuador de alto desempeño para aplicaciones robóticas, especialmente para articulaciones de cuadrúpedos. Integra:</p>
+<ul class="simple">
+<li><p>Motor BLDC (sin escobillas)</p></li>
+<li><p>Reductor planetario</p></li>
+<li><p>Encoder absoluto de una vuelta</p></li>
+<li><p>Algoritmo de control FOC embebido</p></li>
+<li><p>Sensor de temperatura</p></li>
+<li><p>Interfaz de comunicación RS-485</p></li>
+</ul>
+</section>
+<section id="modos-de-control">
+<h3>Modos de Control<a class="headerlink" href="#modos-de-control" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Posición (Position Mode)</strong> : Fija el motor a una posición usando el control PD.</p></li>
+<li><p><strong>Velocidad (Speed Mode)</strong> : El motor gira a una velocidad constante sin importar la carga.</p></li>
+<li><p><strong>Torque Mode</strong> : El motor entrega un torque constante.</p></li>
+<li><p><strong>Modo Mixto (Force-Position Hybrid)</strong> :  Combina torque, velocidad y posición.</p></li>
+<li><p><strong>Modo Amortiguado (Damping Mode)</strong>  : Este modo simula fricción o resistencia viscosa, como si el motor estuviera inmerso en un fluido espeso. (Se ignora posición y torque)</p></li>
+<li><p><strong>Modo Cero Torque</strong> : Este modo desactiva activamente cualquier generación de torque por parte del motor. Modo se seguridad.</p></li>
+</ul>
+</section>
+<section id="caracteristicas-tecnicas-clave">
+<h3>Características técnicas clave<a class="headerlink" href="#caracteristicas-tecnicas-clave" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parámetro</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tipo de motor</p></td>
+<td><p>BLDC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Voltaje de operación</p></td>
+<td><p>24V DC (máximo 30V)</p></td>
+</tr>
+<tr class="row-even"><td><p>Reducción</p></td>
+<td><p>6.33:1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interfaz de comunicación</p></td>
+<td><p>RS-485</p></td>
+</tr>
+<tr class="row-even"><td><p>Baudrate RS-485</p></td>
+<td><p>4.0 Mbps (muy alto)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Modos de control</p></td>
+<td><p>Posición, velocidad, torque, mixto</p></td>
+</tr>
+<tr class="row-even"><td><p>Sensor de posición</p></td>
+<td><p>Encoder absoluto de una vuelta</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensor de temperatura</p></td>
+<td><p>Sí (protege a 90°C)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="investigacion-del-protocolo-rs-485">
+<h2>2. Investigación del Protocolo RS-485<a class="headerlink" href="#investigacion-del-protocolo-rs-485" title="Link to this heading"></a></h2>
+<section id="caracteristicas">
+<h3>Características<a class="headerlink" href="#caracteristicas" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Protocolo de comunicación diferencial (dos cables: A y B)</p></li>
+<li><p><strong>Alta inmunidad al ruido electromagnético</strong></p></li>
+<li><p>Medio físico: par trenzado</p></li>
+<li><p><strong>Half-duplex</strong>: sólo transmite o recibe a la vez</p></li>
+<li><p>Permite hasta 32 dispositivos esclavos</p></li>
+</ul>
+</section>
+<section id="aplicacion-en-robotica">
+<h3>Aplicación en robótica<a class="headerlink" href="#aplicacion-en-robotica" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Comúnmente usado en redes de actuadores (múltiples motores)</p></li>
+<li><p>Cada motor tiene un ID único</p></li>
+</ul>
+</section>
+<section id="esquema-de-comunicacion">
+<h3>Esquema de comunicación<a class="headerlink" href="#esquema-de-comunicacion" title="Link to this heading"></a></h3>
+<p><img alt="RS-485 Bus" src="_images/RS485_BUS.PNG" /></p>
+</section>
+</section>
+<section id="analisis-del-hardware-del-motor-con-base-en-la-figura">
+<h2>3. Análisis del Hardware del Motor (con base en la figura)<a class="headerlink" href="#analisis-del-hardware-del-motor-con-base-en-la-figura" title="Link to this heading"></a></h2>
+<section id="diagrama-de-conexion-oficial">
+<h3>Diagrama de conexión oficial<a class="headerlink" href="#diagrama-de-conexion-oficial" title="Link to this heading"></a></h3>
+<p><img alt="Diagrama de conexión" src="_images/Motor_wire_connection.PNG" /></p>
+</section>
+<section id="descripcion-de-componentes">
+<h3>Descripción de componentes<a class="headerlink" href="#descripcion-de-componentes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>A</strong>: Módulo adaptador USB a RS-485 → permite que tu PC controle el motor por RS-485.</p></li>
+<li><p><strong>B</strong>: Placa de conversión XT30(2+2) → recibe alimentación (24V DC) y canaliza datos al motor.</p></li>
+<li><p><strong>C</strong>: Motor GO-M8010-6 → ejecuta las órdenes recibidas vía RS-485.</p></li>
+<li><p><strong>D</strong>: Cable GH1.25-3 → cable de datos diferencial (RS-485) hacia el adaptador USB.</p></li>
+</ul>
+</section>
+<section id="flujo-de-conexion-paso-a-paso">
+<h3>Flujo de conexión paso a paso<a class="headerlink" href="#flujo-de-conexion-paso-a-paso" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Conecta <strong>C</strong> (motor) a <strong>B</strong> (placa XT30).</p></li>
+<li><p>Conecta alimentación de 24V DC a <strong>B</strong>.</p></li>
+<li><p>Conecta <strong>B</strong> a <strong>A</strong> mediante <strong>D</strong> (cable GH1.25-3).</p></li>
+<li><p><strong>A</strong> se conecta al computador por USB.</p></li>
+<li><p>Configura el puerto serial en <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSBx</span></code> (Linux) o <code class="docutils literal notranslate"><span class="pre">COMx</span></code> (Windows).</p></li>
+</ol>
+</section>
+</section>
+<section id="lectura-del-datasheet-del-imu-openimu300zi">
+<h2>4. Lectura del Datasheet del IMU OpenIMU300ZI<a class="headerlink" href="#lectura-del-datasheet-del-imu-openimu300zi" title="Link to this heading"></a></h2>
+<p><img alt="OpenIMU300ZI" src="_images/OpenIMU300ZI.PNG" /></p>
+<section id="caracteristicas-generales">
+<h3>Características Generales<a class="headerlink" href="#caracteristicas-generales" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>9 DOF</strong>:</p>
+<ul>
+<li><p>3 ejes acelerómetro</p></li>
+<li><p>3 ejes giroscopio</p></li>
+<li><p>3 ejes magnetómetro</p></li>
+</ul>
+</li>
+<li><p>Algoritmos open-source (INS, AHRS, VG)</p></li>
+<li><p>Microcontrolador ARM Cortex M4 &#64;168 MHz</p></li>
+<li><p>Kalman Filter de 16 estados</p></li>
+<li><p>Interfaces UART/SPI</p></li>
+<li><p>Frecuencia máxima de salida: 200 Hz</p></li>
+<li><p>Peso &lt; 17g</p></li>
+</ul>
+</section>
+<section id="rendimiento">
+<h3>Rendimiento<a class="headerlink" href="#rendimiento" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sensor</p></th>
+<th class="head"><p>Rango</p></th>
+<th class="head"><p>Precisión Típica</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Acelerómetro</p></td>
+<td><p>±8g</p></td>
+<td><p>&lt;10 µg (instab.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Giroscopio</p></td>
+<td><p>±400 °/s</p></td>
+<td><p>6 °/h (instab.)</p></td>
+</tr>
+<tr class="row-even"><td><p>Magnetómetro</p></td>
+<td><p>±8000 mGauss</p></td>
+<td><p>0.25 mGauss</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="aplicaciones">
+<h3>Aplicaciones<a class="headerlink" href="#aplicaciones" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Robótica</p></li>
+<li><p>Estabilización de cámaras y antenas</p></li>
+<li><p>Vehículos autónomos</p></li>
+</ul>
+</section>
+</section>
+<section id="investigacion-del-control-foc">
+<h2>5. Investigación del Control FOC<a class="headerlink" href="#investigacion-del-control-foc" title="Link to this heading"></a></h2>
+<section id="que-es-foc">
+<h3>¿Qué es FOC?<a class="headerlink" href="#que-es-foc" title="Link to this heading"></a></h3>
+<p><strong>FOC (Field Oriented Control)</strong> es un método de control vectorial para motores AC sin escobillas (BLDC y PMSM) que permite:</p>
+<ul class="simple">
+<li><p>Control preciso de <strong>torque</strong>, <strong>velocidad</strong> y <strong>posición</strong></p></li>
+<li><p>Reducción de vibraciones y ruido</p></li>
+<li><p>Alto rendimiento energético</p></li>
+</ul>
+</section>
+<section id="fundamento">
+<h3>Fundamento<a class="headerlink" href="#fundamento" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Transformación de Clarke y Park</strong>: convierte corrientes trifásicas a un marco de referencia rotatorio (DQ)</p></li>
+<li><p><strong>Control independiente de las corrientes Iq (torque) e Id (flujo)</strong></p></li>
+<li><p><strong>Inversión de transformación</strong> para generar PWM hacia los MOSFETs</p></li>
+</ol>
+</section>
+<section id="esquema-del-foc">
+<h3>Esquema del FOC<a class="headerlink" href="#esquema-del-foc" title="Link to this heading"></a></h3>
+<p><img alt="FOC Esquema" src="_images/FOC.PNG" /></p>
+</section>
+<section id="ventajas">
+<h3>Ventajas<a class="headerlink" href="#ventajas" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Control suave a bajas velocidades</p></li>
+<li><p>Excelente respuesta dinámica</p></li>
+<li><p>Eficiencia mejorada en consumo</p></li>
+</ul>
+</section>
+<section id="en-el-motor-go-m8010-6">
+<h3>En el motor GO-M8010-6<a class="headerlink" href="#en-el-motor-go-m8010-6" title="Link to this heading"></a></h3>
+<p>El FOC está embebido dentro del controlador del motor:</p>
+<ul class="simple">
+<li><p>El usuario <strong>no necesita programarlo</strong></p></li>
+<li><p>Solo se deben enviar comandos (posición, velocidad, torque)</p></li>
+<li><p>El driver realiza el FOC internamente</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="descripcion-general-del-hardware-del-motor-y-del-codificador">
+<h1>🔧 Descripción General del Hardware del Motor y del Codificador<a class="headerlink" href="#descripcion-general-del-hardware-del-motor-y-del-codificador" title="Link to this heading"></a></h1>
+<p>Los componentes principales de un motor de articulación robótica incluyen:</p>
+<ul class="simple">
+<li><p>Placa de control</p></li>
+<li><p>Estator</p></li>
+<li><p>Rotor</p></li>
+<li><p>Caja de engranajes planetarios</p></li>
+</ul>
+<p>⚙️ Como los motores están diseñados para operar a <strong>altas velocidades y bajos pares</strong>, mientras que los robots requieren <strong>bajas velocidades y altos pares</strong>, el rotor del motor debe estar conectado a una <strong>caja reductora</strong> para adecuar su salida antes de transmitirla al sistema.</p>
+<hr class="docutils" />
+<section id="codificador-encoder">
+<h2>🎯 Codificador (Encoder)<a class="headerlink" href="#codificador-encoder" title="Link to this heading"></a></h2>
+<p>Un codificador es un sensor que mide ángulos de rotación. Existen:</p>
+<ul class="simple">
+<li><p>Incrementales</p></li>
+<li><p>Absolutos multivuelta</p></li>
+<li><p><strong>Absolutos monovuelta</strong> ✅ (utilizado aquí)</p></li>
+</ul>
+<p>Este codificador está instalado en el <strong>rotor</strong> y funciona como un «reloj». Cada vez que se enciende el sistema, informa el ángulo <strong>entre 0° y 360°</strong>.</p>
+<p>📌 Ejemplo:</p>
+<ul class="simple">
+<li><p>Si al encender el motor, el encoder reporta <strong>380°</strong>, significa una vuelta completa + 20°.</p></li>
+<li><p>Si se apaga y enciende nuevamente sin moverse, el encoder reportará solo <strong>20°</strong> (pierde el conteo de vueltas tras apagado).</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="control-hibrido-de-motores">
+<h1>🤖 Control Híbrido de Motores<a class="headerlink" href="#control-hibrido-de-motores" title="Link to this heading"></a></h1>
+<p>El motor de articulación de Unitree es una <strong>unidad de potencia integrada</strong>, con su algoritmo de control embebido. El usuario <strong>solo envía comandos</strong>, y el motor:</p>
+<ul class="simple">
+<li><p>Recibe</p></li>
+<li><p>Calcula internamente</p></li>
+<li><p>Aplica el torque deseado</p></li>
+</ul>
+<section id="comandos-de-control">
+<h2>📐 Comandos de control:<a class="headerlink" href="#comandos-de-control" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Par de avance (feedforward):</strong> <code class="docutils literal notranslate"><span class="pre">tau</span></code></p></li>
+<li><p><strong>Posición angular deseada:</strong> <code class="docutils literal notranslate"><span class="pre">q_des</span></code></p></li>
+<li><p><strong>Velocidad angular deseada:</strong> <code class="docutils literal notranslate"><span class="pre">dq_des</span></code></p></li>
+<li><p><strong>Rigidez de posición:</strong> <code class="docutils literal notranslate"><span class="pre">k_p</span></code></p></li>
+<li><p><strong>Coeficiente de amortiguamiento:</strong> <code class="docutils literal notranslate"><span class="pre">k_d</span></code></p></li>
+</ol>
+</section>
+<section id="control-pd-aplicado">
+<h2>🔁 Control PD aplicado:<a class="headerlink" href="#control-pd-aplicado" title="Link to this heading"></a></h2>
+<div class="highlight-math notranslate"><div class="highlight"><pre><span></span>\tau = \text{tau} + k_p (q_{des} - q) + k_d (dq_{des} - dq)
+</pre></div>
+</div>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tau</span></code></p></td>
+<td><p>Par total deseado en Nm</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">q_des</span></code></p></td>
+<td><p>Posición angular deseada (rad)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">q</span></code></p></td>
+<td><p>Posición angular actual (rad)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dq_des</span></code></p></td>
+<td><p>Velocidad angular deseada (rad/s)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dq</span></code></p></td>
+<td><p>Velocidad angular actual (rad/s)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">k_p</span></code></p></td>
+<td><p>Coeficiente proporcional (rigidez)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">k_d</span></code></p></td>
+<td><p>Coeficiente derivativo (amortiguación)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<hr class="docutils" />
+<section id="conversion-por-relacion-de-reduccion">
+<h2>⚙️ Conversión por Relación de Reducción<a class="headerlink" href="#conversion-por-relacion-de-reduccion" title="Link to this heading"></a></h2>
+<p>Al tener una <strong>caja reductora</strong>, los comandos deben considerar la <strong>relación de reducción (R)</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Relación = vueltas del rotor / vueltas del eje de salida
+</pre></div>
+</div>
+<section id="ejemplos">
+<h3>Ejemplos:<a class="headerlink" href="#ejemplos" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Motor</p></th>
+<th class="head"><p>Relación de Reducción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GO-M8010-6</p></td>
+<td><p>6.33</p></td>
+</tr>
+<tr class="row-odd"><td><p>A1</p></td>
+<td><p>9.1</p></td>
+</tr>
+<tr class="row-even"><td><p>B1</p></td>
+<td><p>8.66</p></td>
+</tr>
+</tbody>
+</table>
+<p>📌 Si el rotor gira <strong>6.33 vueltas</strong>, el eje de salida gira <strong>1 vuelta</strong>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2025, Saul Nacion.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
